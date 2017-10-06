@@ -13,37 +13,31 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },  
+  },
 });
 
-class ScreenC extends React.Component {
-  render() {    
+class ScreenD0 extends React.Component {
+  render() {
     return(
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Screen C
+          Screen D0
         </Text>    
-        <Button 
-          onPress={() => this.props.navigation.dispatch({ type: 'selectScreenD0' }) }
-          title="Go to screen D0"
-        />
-        <Text style={styles.welcome}>        
-        </Text>
-        <Button 
-          onPress={() => this.props.navigation.dispatch({ type: 'selectScreenD1' }) }
-          title="Go to screen D1"
+        <Button
+          onPress={() => this.props.navigation.dispatch({ type: 'Reset' }) }
+          title="Reset"
         />
       </View>
     );
   }
 }
 
-ScreenC.propTypes = {
+ScreenD0.propTypes = {
   navigation: PropTypes.object.isRequired,
 };
 
-ScreenC.navigationOptions = {
-  title: 'Screen C',
+ScreenD0.navigationOptions = {
+  title: 'Screen D0',
 };
 
-export default ScreenC;
+export default ScreenD0;
